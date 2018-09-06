@@ -1,0 +1,10 @@
+/* style pour toutes les pages des documents */
+body{
+    font-family:georgia, serif;
+    background: center no-repeat url("../images/fond.png");
+}
+h1 {
+    color:blue;
+    border: 1px solid black;
+    text-align: center;
+}
