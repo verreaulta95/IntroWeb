@@ -1,0 +1,33 @@
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+    font: 1.0em Arial, Helvetica, sans-serif
+}
+h1{
+    text-align: center;
+    border: 5px solid olivedrab;
+}
+.box {
+    width: 20%;
+	border: 2px solid darkblue;
+    float: left;
+
+}
+.box2 {
+  border: 2px solid red;
+    width: 78.3%;
+    float: left;
+}
+.par9{
+    clear: left;
+}
+.par8{
+    clear: left;
+}
+#img{
+    height: 395px;
+    width: 783px;
+    text-align: center;
+    border: 2px solid black;
+    float: left;
+}
