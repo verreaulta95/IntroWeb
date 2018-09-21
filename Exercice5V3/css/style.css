@@ -9,6 +9,9 @@ h1{
 h2{
 	text-align: center;
 }
+.photo{
+	text-align: center;
+}
 
 
 nav
@@ -21,10 +24,18 @@ nav
 section
 {
 	border : 1px solid blue ;
-	width: 55%;
 	text-align: center;
-	margin-left: 110px;
 	display: inline-block;
+	margin-right: 40px;
+}
+#section1{
+	width: 32%;
+	margin-left: 120px;
+}
+#section2{
+	width: 30%;
+    vertical-align: top;
+	margin-left: 20px;
 }
 footer{
 	text-align:center;
