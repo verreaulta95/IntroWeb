@@ -39,37 +39,37 @@
 			<ul><li><a href="#" target="_blank"><b>Accueil</b></a></li><li><a href="#" target="_blank">| Formation</a></li><li><a href="#" target="_blank">| Membres</a></li><li><a href="#" target="_blank">| Services</a></li></ul>
 			</nav>
 			<!--fin Nav-->
+			<h1>Entrez les informations du membre</h1>
 			<div>
-				<h1>Entrez les informations du memebre</h1>
+				<label>Nom<span>*</span></label>
+				<input size = "40">
 			</div>
 			<div>
-				<label>Nom</label>
-				<input>
-			</div>
-			<div>
-				<label>Prénom</label>
-				<input>
+				<label>Prénom<span>*</span></label>
+				<input size = "40">
 			</div>
 			<div>
 				<label>Adresse Courriel</label>
-				<input>
+				<input size = "40">
 			</div>
 			<div>
-				<label>Téléphone</label>
-				<input placeholder="(418) 917-1684" size = "20">
+				<label>Téléphone<span>*</span></label>
+				<input placeholder="(418) 917-1684" size="10">
 			</div>
-			<div>
-				<label>Commentaire</label>
-				<input textarea placeholder ="Ecrivez vos commentaires" >
+			<div id = "commentaire">
+				<label>Commentaires</label>
+				<textarea placeholder ="Ecrivez vos commentaires" ></textarea>
 			</div>
-			<div>
-				<label> Catégorie </label>
+			<div id = "cat">
+			<label> Catégorie </label>
 				<select name = "liste">
 					<option value = "État1">Étudiant</option>
 					<option value = "État2">Adulte</option>
 					<option value = "État3">Retraité</option>
+					</select>
 			</div>
-
+			<input type = "submit" class = "submit" value="Envoyer" size = "40px">
+			<input type = "reset" class = "reinitialise" value="Reinitialiser" size = "40px">
 			<!--ligne de séparation-->
 			<hr>
 
@@ -79,7 +79,7 @@
 		<!--fin container-->
 		<!--footer-->
 		<footer>
-			<ul><li><a href="index.html" target="_blank"><b>Accueil</b></a></li><li><a href="#" target="_blank">| Formation</a></li><li><a href="#" target="_blank">| Membres</a></li><li><a href="#" target="_blank">| Services</a></li></ul>
+			<ul><li><a href="index.html" target="_blank"><b><span class ="acc">Accueil</span></b></a></li><li><a href="#" target="_blank">|<span class = "acc"> Formation</span></a></li><li><a href="#" target="_blank">|<span class = "acc"> Membres</span></a></li><li><a href="#" target="_blank">|<span class = "acc"> Services</span></a></li></ul>
 
 			<p>&copy 2018 <b>Institut des sciences de la mer de Rimousky.</b> Tous droits réservés.</p>
 		</br>
