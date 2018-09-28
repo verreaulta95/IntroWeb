@@ -96,6 +96,7 @@ label{
     width: 150px;
     margin-bottom: 15px;
 	margin-left:50px;
+	vertical-align: top;
 }
 /*section*/
 section {
@@ -165,10 +166,6 @@ footer p {
 	text-align:center;
 
 }
-.commentaire {
-	width : 50px;
-	height : 50px
-}
 #Boutton{
 	width : 40px;
 }
@@ -188,3 +185,14 @@ textarea{
 	width:350px;
 	height: 100px;
 }
+table{
+	margin-left:60px;
+	border: solid black;
+}
+th{
+	border:dashed lightblue ;
+}
+tr{
+	border:solid lightgreen;
+}
+
