@@ -22,14 +22,14 @@ function btnCalculer_onclick()
     }
     if (document.getElementById("radSoir").checked ==  true)
     {
-        if(age > 17)
+        if(age >= 16)
         {
             reduction = .40;
             representation = "soir";
         }
         else
         {
-            reduction =0;
+            reduction = 0;
             representation = "soir";
         }
     }

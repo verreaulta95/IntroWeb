@@ -1,13 +1,12 @@
 function btnCalculer_onclick()
 {
-    var prix,age,representation,reduction,message,montant,film,session;  //variable
+    var prix,age,representation,reduction,message,montant,film;  //variable
 
     prix = parseFloat(document.getElementById("txtBasePrix").value);
     age = document.getElementById("txtAge").value;
+    film = document.getElementById("lstOptions").value;
     message = document.getElementById("lblMessage").value;
     representation = document.getElementById("radMidi","radSoir").value;
-    film = document.getElementById("lstOptions").value;
-    session = document.getElementsByName("chkMiSession").value;
 
     if (document.getElementsByName("chkMiSession").value == true)
     {
@@ -26,14 +25,14 @@ function btnCalculer_onclick()
         }
         if (document.getElementById("radSoir").checked ==  true)
         {
-            if(age > 17)
+            if(age >= 16)
             {
                 reduction = .40;
                 representation = "soir";
             }
             else
             {
-                reduction =0;
+                reduction = 0;
                 representation = "soir";
             }
         }
