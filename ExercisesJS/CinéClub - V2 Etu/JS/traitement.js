@@ -1,14 +1,13 @@
 function btnCalculer_onclick()
 {
-    var prix,age,representation,reduction,message,montant,film;  //variable
+    var prix,age,representation,reduction,montant,film;  //variable
 
     prix = parseFloat(document.getElementById("txtBasePrix").value);
     age = document.getElementById("txtAge").value;
     film = document.getElementById("lstOptions").value;
-    message = document.getElementById("lblMessage").value;
     representation = document.getElementById("radMidi","radSoir").value;
 
-    if (document.getElementsByName("chkMiSession").value == true)
+    if (document.getElementById("chkMiSession").checked == true)
     {
         if(document.getElementById("radMidi").checked == true)
         {
@@ -37,10 +36,13 @@ function btnCalculer_onclick()
             }
         }
     }
+    else
+    {
+        reduction= 0;
+    }
 
     reduction = prix*reduction;
     montant = prix - reduction;
-    message = montant;
     console.log("Voici le montant a debourser pour " + film +"  pour le "+ representation +" vous fera : " + montant + "$");
 
 }
