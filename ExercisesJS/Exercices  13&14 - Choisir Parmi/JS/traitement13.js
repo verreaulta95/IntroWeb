@@ -1,17 +1,10 @@
 function btnCalculer_onclick()
 {
-    var Jour,Dimanche,Lundi,Mardi,Mercredi,Jeudi,Vendredi,Samedi;
+    var Jour;
 
-    Jour = (document.getElementById("txtNumSem").value);
-    Lundi = (document.getElementById("txtNumSem").value);
-    Mardi = (document.getElementById("txtNumSem").value);
-    Mercredi = (document.getElementById("txtNumSem").value);
-    Jeudi = (document.getElementById("txtNumSem").value);
-    Vendredi = (document.getElementById("txtNumSem").value);
-    Samedi = (document.getElementById("txtNumSem").value);
-    Dimanche = (document.getElementById("txtNumSem").value);
+    Jour = parseFloat(document.getElementById("txtNumSem").value);
 
-   switch ((document.getElementById("txtNumSem").value))
+   switch (Jour)
    {
        case 1:
            Jour = "Lundi";

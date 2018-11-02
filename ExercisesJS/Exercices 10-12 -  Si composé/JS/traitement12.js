@@ -14,7 +14,7 @@ function btnCalculer_onclick()
     }
     else
     {
-        if((Nbre1 = Nbre2) || (Nbre2 > Nbre3))
+        if((Nbre1 == Nbre2) || (Nbre2 > Nbre3))
         {
             Nbre4 = Nbre4 + Nbre1;
         }
