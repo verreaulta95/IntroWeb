@@ -14,20 +14,21 @@
 	<p class="Align"> <label >Choix du vétérinaire:</label>
 	<select  id="lstVeterinaire" name="lstVeterinaire">
 		<option value="Audrey Bouchard" >Audrey Bouchard</option>
-		<option value="Stéphane Tremblay"  >Stéphane Tremblay</option>
+		<option value="Stéphane Tremblay" >Stéphane Tremblay</option>
 		<option value="Maxime Simard" >Maxime Simard</option>
 		<option value="Mélissa Caron" >Mélissa Caron</option>
 	</select>
 
-	<p class="Align"> Entrez le nombre de jours:<input class="champ" id="txtNbreJours" name="txtNbreJours" value="">  </p> 
-
+	<p class="Align"> Entrez le nombre de jours:<input class="champ" id="txtNbreJours" name="txtNbreJours" value="">  </p>
+	<p class ="Align"> Entrez le nombre d'heures fait par le vétérinaire :<input class ="champ" id = "txtNbreHeures" value=""> </p>
 	<!-- Case à cocher -->
-	<p class="Align">Service de toilettage<input type="checkbox" id="chkServ" name="chkServ">  </p> 
+	<p class="Align">Service de toilettage<input type="checkbox" id="chkServ" name="chkServ" onclick="saisirService_onclick()">  </p>
 
 	<!-- Case à cocher -->
 	<p class="Align">
-	Chien<input type="radio" name="radChoix" checked=true id="radChien">
-	Chat<input type="radio" name="radChoix" id="radChat">
+	Chien<input type="radio" name="radChoix" checked=true id="radChien" onclick="radChien_onclick()">
+	Chat<input type="radio" name="radChoix" id="radChat" onclick="radChat_onclick()">
+	<img src="img/shiba-inu.jpg"  id="imgChienChat" height="200" width="200">
 	</p>
 
 	<!-- label affichage -->

@@ -1,33 +1,33 @@
 function btnCalculer_onclick()
 {
-    var Jour;
+    var NoJour;
 
-    Jour = parseFloat(document.getElementById("txtNumSem").value);
+    NoJour = parseFloat(document.getElementById("txtNumSem").value);
 
-   switch (Jour)
+   switch (NoJour)
    {
        case 1:
-           Jour = "Lundi";
+           NoJour = "Lundi";
            break;
        case 2:
-           Jour = "Mardi";
+           NoJour = "Mardi";
            break;
        case 3:
-           Jour = "Mercredi";
+           NoJour = "Mercredi";
        case 4:
-           Jour = "Jeudi";
+           NoJour = "Jeudi";
            break;
        case 5:
-           Jour = "Vendredi";
+           NoJour = "Vendredi";
            break;
        case 6:
-           Jour = "Samedi";
+           NoJour = "Samedi";
            break;
        case 7:
-           Jour = "Dimanche";
+           NoJour = "Dimanche";
            break;
    }
 
-    console.log("Voici le jour de la semaine : " + Jour);
+    document.getElementById("lblMessage").innerHTML = ("Voici le jour de la semaine : " + NoJour);
 
 }
