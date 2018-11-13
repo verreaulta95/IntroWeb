@@ -32,9 +32,33 @@ function btnTrouverMoy_onclick()
         Total += tabPoint[i];
     }
     moy = Total/tabJoueur.length;
-    document.getElementById("lblReponse").innerHTML = "Numéro du joueur " + moy;
+    document.getElementById("lblReponse").innerHTML = "La moyenne est de = " + moy;
 }
 function btnTrouverBest_onclick()
+{
+    Meilleur =1;
+    for(var i =0; i < tabPoint.length; i++)
+    {
+        if(tabPoint[i] > Meilleur )
+        {
+            Meilleur = tabPoint[i];
+        }
+        document.getElementById("lblReponse").innerHTML = "Le meilleur score est de  = " + Meilleur;
+    }
+}
+function  btnTrouverPire_onclick()
+{
+    Pire = 100;
+    for(var i =0; i < tabPoint.length; i++)
+    {
+        if(tabPoint[i] < Pire)
+        {
+            Pire = tabPoint[i];
+        }
+        document.getElementById("lblReponse").innerHTML = "Le pire score est de  = " + Pire;
+    }
+}
+function btnRechercher_onclick()
 {
 
 }
