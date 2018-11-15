@@ -1,4 +1,4 @@
-var Cpt,Total,saisie,Recherche,Moy,Meilleur,Pire;
+var Cpt,Total,Meilleur,Pire,Recherche;
 Cpt = 0;
 var tabJoueur = new Array(4);
 var tabPoint = new Array(4);
@@ -60,5 +60,12 @@ function  btnTrouverPire_onclick()
 }
 function btnRechercher_onclick()
 {
-
+    for(var i =0; i < tabJoueur.length; i++)
+    {
+        if (tabJoueur == tabPoint)
+        {
+            Recherche = tabPoint[i];
+        }
+    }
+    document.getElementById("lblReponse").innerHTML = "Le score du joueur est de = " + Recherche;
 }

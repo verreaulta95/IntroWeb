@@ -42,6 +42,5 @@ function btnCalculer_onclick()
     reduction = prix*reduction;
     montant = prix - reduction;
     message = montant;
-    console.log("Voici le montant a debourser pour " + film +"  pour le "+ representation +" vous fera : " + montant + "$");
-
+    console.log("Voici le montant a debourser pour " + film +"  pour le "+ representation +" vous fera : " + message + "$");
 }
