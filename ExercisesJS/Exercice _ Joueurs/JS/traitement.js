@@ -107,5 +107,8 @@ function btnRechercher_onclick()
     {
         document.getElementById("lblReponse").innerHTML = "Vous navez pas trouver le nom demande";
     }
+}
+function calculRecherche()
+{
 
 }
