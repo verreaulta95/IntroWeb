@@ -44,3 +44,11 @@ function btnCalculer_onclick()
     message = montant;
     console.log("Voici le montant a debourser pour " + film +"  pour le "+ representation +" vous fera : " + message + "$");
 }
+function lstOptions_onchange()
+{ var changeFilm;
+
+alert('test')
+    changeFilm =  document.getElementById("lstOptions").value;
+
+    document.getElementById("imgFilm").src + "img/" + changeFilm + ".jpg";
+}

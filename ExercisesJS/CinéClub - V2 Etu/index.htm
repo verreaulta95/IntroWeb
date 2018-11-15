@@ -16,13 +16,14 @@
       <!-- Liste déroulante -->
       <p> Sélectionnez le choix du film:
          <select 
-           id="lstOptions" size=1 name="lstOptions">
-         	<option selected >Au poste!</option>
-         	<option >Colette</option>
-         	<option >Halloween</option>
-         	<option >La religieuse</option>
+           id="lstOptions" size=1 name="lstOptions" onchange="lstOptions_onchange()">
+         	<option selected value="Au_poste" >Au_poste</option>
+         	<option value="Colette">Colette</option>
+         	<option value="Halloween">Halloween</option>
+         	<option value="La_religieuse">La_religieuse</option>
          </select>
       </p>
+       <img src="img/Au_poste.jpg" id="imgFilm" height="200" width="220" >
       <!-- Radio bouton -->
       Midi<input type="radio" name="radChoix" checked="true" id="radMidi">
       Soir<input type="radio" name="radChoix" id="radSoir">
@@ -34,6 +35,7 @@
       <p><button id="btnCalculer" name="btnCalculer" type="button" onclick="btnCalculer_onclick()">Calculer</button></p>
    </fieldset>
 </form>
-<script src="JS/traitement.js"></script>
+<script src="JS2/traitement.js"></script>
 </body>
 </html>
+
