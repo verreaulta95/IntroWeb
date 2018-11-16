@@ -1,13 +1,12 @@
 function btnCalculer_onclick()
 {
-    var prix,age,representation,reduction,message,montant,film,session;  //variable
+    var prix,age,representation,reduction,montant,film;  //variable
 
     prix = parseFloat(document.getElementById("txtBasePrix").value);
     age = document.getElementById("txtAge").value;
-    message = document.getElementById("lblMessage").value;
     representation = document.getElementById("radMidi","radSoir").value;
     film = document.getElementById("lstOptions").value;
-    session = document.getElementsByName("chkMiSession").value;
+    lstOptions_onchange();
 
     if (document.getElementsByName("chkMiSession").value == true)
     {
@@ -41,13 +40,12 @@ function btnCalculer_onclick()
 
     reduction = prix*reduction;
     montant = prix - reduction;
-    message = montant;
-    console.log("Voici le montant a debourser pour " + film +"  pour le "+ representation +" vous fera : " + message + "$");
+    console.log("Voici le montant a debourser pour " + film +"  pour le "+ representation +" vous fera : " + montant + "$");
 }
 function lstOptions_onchange()
-{ var changeFilm;
-
-alert('test')
+{
+    var changeFilm;
+    alert('test');
     changeFilm =  document.getElementById("lstOptions").value;
 
     document.getElementById("imgFilm").src + "img/" + changeFilm + ".jpg";
