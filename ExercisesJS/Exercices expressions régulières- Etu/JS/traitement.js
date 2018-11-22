@@ -30,5 +30,5 @@ function verifierEntreDixTrente( Chaine ) //un chiffre entre 10 et 30
 
 function verifierEntreUnVingt( Chaine ) //un chiffre entre 1 et 20
 {
-    return /^([1][0-9])$|[20]$/.test(Chaine)
+    return /^(([1])?([0-9]$)|([20]?$))|[20]$/.test(Chaine)
 }
