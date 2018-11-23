@@ -1,12 +1,7 @@
-function btnCalculer_onclick()
-{
-    if(valideChampOblig() === true)
-    {
-        traiterInfos();
-    }
-}
+
 function calculer(Nb1,Nb2,Operateur)
 {
+    var Resultat =0;
     switch(Operateur)
     {
         case "+" :
@@ -38,37 +33,99 @@ function traiterInfos()
     document.getElementById("lblMessage").innerHTML = "Voici votre resultat : " + Resultat;
 }
 
-function valideChampOblig()
+
+function validExist(nomId)
 {
     var valide;
-    valide = false;
-    if((validExist("txtNbre1") === true) && (validExist("txtNbre2") === true) && validExist("txtOperateur") === true)
+    valide = true;
+
+    if(document.getElementById(nomId).value === "" )
     {
-        valide = true;
+        valide = false;
+        document.getElementById(nomId).style.backgroundColor="red";
     }
     else
     {
-        valide = false;
+        valide = true;
+        document.getElementById(nomId).style.backgroundColor="white";
     }
 
     return valide;
 }
 
-function validExist(nomId)
+function valideChampOblig()
 {
-    var validation;
-    validation = false;
+    var valide,tabNomId;
+    tabNomId = new Array("txtNbre1","txtNbre2","txtOperateur")
+    valide = true;
 
-    if(document.getElementById(nomId).value === "" )
+    for(var i =0; i < tabNomId.length; i++)
     {
-        document.getElementById(nomId).style.backgroundColor="red";
-        validation = false;
+        if( validExist(tabNomId[i]) === false)
+        {
+            valide = false;
+        }
+    }
+
+    return valide;
+}
+
+function btnCalculer_onclick()
+{
+    if(valideChampOblig() === true)
+    {
+         if(valideFormats() === true)
+            {
+                traiterInfos();
+            }
+    }
+}
+function valideFormats()
+{
+    var valide = true;
+
+    if(valideNo(document.getElementById("txtNbre1").value) === false)
+    {
+        valide = false;
+        document.getElementById("txtNbre1").style.backgroundColor="red";
     }
     else
     {
-        document.getElementById(nomId).style.backgroundColor="white";
-        validation = true;
+        document.getElementById("txtNbre1").style.backgroundColor="white";
     }
 
-    return validation;
+
+    if(valideNo(document.getElementById("txtNbre2").value) === false)
+    {
+        valide = false;
+        document.getElementById("txtNbre2").style.backgroundColor="red";
+    }
+    else
+    {
+        document.getElementById("txtNbre2").style.backgroundColor="white";
+    }
+
+
+    if(valideOperateur(document.getElementById("txtOperateur").value) === false)
+    {
+        valide = false;
+        document.getElementById("txtOperateur").style.backgroundColor="red";
+    }
+    else
+    {
+        document.getElementById("txtOperateur").style.backgroundColor="white";
+    }
+
+
+    return valide;
+}
+
+function valideNo(chaine)
+{
+    return /^[0-9]+$/.test(chaine)
+}
+
+function valideOperateur(chaine)
+{
+    return /^(\+|\-|\/|\*)?/.test(chaine)
 }

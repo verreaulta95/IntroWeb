@@ -40,24 +40,15 @@ function traiterInfos()
 
 function valideChampOblig()
 {
-    var valide,tabNomId;
-    tabNomId = new Array("txtNbre1","txtNbre2","txtOperateur")
+    var valide;
     valide = false;
-
-    for(var i =0; i < tabNomId.length; i++)
+    if((validExist("txtNbre1") === true) && (validExist("txtNbre2") === true) && validExist("txtOperateur") === true)
     {
-        if(validExist("txtNbre1") === true)
-        {
-            valide = true;
-        }
-        else if(validExist("txtNbre2") === true)
-        {
-            valide = true;
-        }
-        else if (validExist("txtOperateur") === true;)
-        {
-            valide = true;
-        }
+        valide = true;
+    }
+    else
+    {
+        valide = false;
     }
 
     return valide;
