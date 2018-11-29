@@ -1,3 +1,13 @@
+function btnCalculer_onclick()
+{
+    if(valideChampOblig() === true)
+    {
+        if(valideFormats() === true)
+        {
+            traiterInfos();
+        }
+    }
+}
 
 function calculer(Nb1,Nb2,Operateur)
 {
@@ -32,7 +42,6 @@ function traiterInfos()
     Resultat = calculer(Nb1,Nb2,Operateur);
     document.getElementById("lblMessage").innerHTML = "Voici votre resultat : " + Resultat;
 }
-
 
 function validExist(nomId)
 {
@@ -70,16 +79,6 @@ function valideChampOblig()
     return valide;
 }
 
-function btnCalculer_onclick()
-{
-    if(valideChampOblig() === true)
-    {
-         if(valideFormats() === true)
-            {
-                traiterInfos();
-            }
-    }
-}
 function valideFormats()
 {
     var valide = true;
@@ -115,7 +114,6 @@ function valideFormats()
     {
         document.getElementById("txtOperateur").style.backgroundColor="white";
     }
-
 
     return valide;
 }
