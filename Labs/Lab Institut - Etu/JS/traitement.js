@@ -1,13 +1,29 @@
-function frmMembre_onclick()
+function frmMembre_onsubmit()
 {
+    var valide,tarif;
+    valide = true;
     if(validChampOblig() === true)
     {
         if(validFormats() === true)
         {
-            valide = true;
-            coutTarif();
+           tarif = coutTarif();
+           if(confirm("Voici le tarif selon votre âge : + " + tarif ) === true)
+           {
+
+           }
+           else
+           {
+               valide = false;
+           }
         }
     }
+    else
+    {
+        valide = false;
+        document.getElementById("lblMessageErreur").innerHTML="Veuillez remplir les champs obligatoires.";
+    }
+
+    return valide;
 
 }
 function validChampOblig()
@@ -45,11 +61,10 @@ function validExist(nomId)
 }
 
 
-
-/*
 function coutTarif()
 {
     var tarif =0;
+    var type = document.getElementById("type").value;
     switch(type)
     {
         case "adulte" :
@@ -64,14 +79,13 @@ function coutTarif()
     }
 
     return tarif;
-    document.getElementById("lblMessageTarif").innerHTML = ("Voici le tarif selon votre âge : + " + tarif );
+  /*  */
 }
 
-*/
+
 function validFormats()
 {
     var valide = true;
-    var message;
     if(valideCar(document.getElementById("txtNom").value) === false)
     {
         valide = false;
@@ -114,20 +128,29 @@ function validFormats()
         document.getElementById("txtTel").style.borderColor="";
     }
 
-    if(validePostal(document.getElementById("txtCodePostal").value) === false)
+    if((validePostal(document.getElementById("txtCodePostal").value) === false) && (document.getElementById("txtCodePostal").value !== ""))
     {
+        valide = false;
         document.getElementById("txtCodePostal").style.borderColor="red";
     }
-
-    if(validePerm(document.getElementById("txtCodePerm").value) === false)
+    else
     {
+        document.getElementById("txtCodePostal").style.borderColor="";
+    }
+
+    if((validePerm(document.getElementById("txtCodePerm").value) === false) && (document.getElementById("txtCodePerm").value !== ""))
+    {
+        valide = false;
         document.getElementById("txtCodePerm").style.borderColor="red";
+    }
+    else
+    {
+        document.getElementById("txtCodePerm").style.borderColor="";
     }
 
     return valide;
 
 }
-
 
 
 function valideCar(chaine)
@@ -137,12 +160,12 @@ function valideCar(chaine)
 
 function valideTel(chaine)
 {
-    return /^\(\d{3}\)-*[0-9]{3}-{1}[0-9]{4}$/.test(chaine);
+    return /^\(\d{3}\) -*[0-9]{3}-{1}[0-9]{4}$|[0-9]{3}-[0-9]{3}-[0-9]{4}/.test(chaine);
 }
 
 function validePostal(chaine)
 {
-    return /^[A-z]{1}[0-9]{1}[A-z]-*[0-9]{1}[A-z]{1}[0-9]{1}$/.test(chaine);
+    return /^[A-z]{1}[0-9]{1}[A-z]{1} {1}[0-9]{1}[A-z]{1}[0-9]{1}$/.test(chaine);
 }
 
 function validePerm(chaine)

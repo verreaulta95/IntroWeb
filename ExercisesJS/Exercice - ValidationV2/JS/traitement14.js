@@ -65,7 +65,7 @@ function validExist(nomId)
 function valideChampOblig()
 {
     var valide,tabNomId;
-    tabNomId = new Array("txtNbre1","txtNbre2","txtOperateur")
+    tabNomId = new Array("txtNbre1","txtNbre2","txtOperateur");
     valide = true;
 
     for(var i =0; i < tabNomId.length; i++)
