@@ -39,23 +39,21 @@
 			<!--fin Nav-->
 			<h1>Entrez les informations du membre</h1>
 			<!--boîte de texte-->
-			<form method="get" id="frmMembre" action="Reponse.htm" onsubmit="return frmMembre_onsubmit()">
+			<form method="get" id="frmMembre" action="">
 			<label id="lblMessageErreur"></label>
 			<div><label>Nom<span>*</span></label><input type="text" id="txtNom" name="txtNom"  size="40" ></div>
 			<div><label>Prénom<span>*</span></label><input type="text" id="txtPrenom" name="txtPrenom" size="40"></div>
 			<div><label>Adresse<span>*</span></label><input type="text" id="txtAdresse" name="txtAdresse" size="40" ></div>
 			<div><label>Ville<span>*</span></label><input type="text" id="txtVille" name="txtVille" size="40" ></div>
 			<div><label>Code postal</label><input type="text" id="txtCodePostal" name="txtCodePostal" size="15" ></div>
-			<div><label for="tel">Téléphone<span>*</span></label><input type="text" id="txtTel" name="txtTel" size="13" class="obligatoire" value=""></div>
+			<div><label for="tel">Téléphone<span>*</span></label><input id="tel" type="text" id="txtTel" name="txtTel" size="13" class="obligatoire" value=""></div>
 			<div><label>Code permanant</label><input type="text" id="txtCodePerm" name="txtCodePerm" size="12" ></div>
-			<div><label>Age<input type="text" id="Age" size="12"></label> </div>
 			<label for="type">Catégorie</label><select id="type" name="type">
 				<option value="adulte" selected>adulte</option>
 				<option value="étudiant">étudiant</option>
 				<option value="retraité">retraité</option>
 			</select>
-			<div id="Boutons"><input class="bouton" value="Envoyer" id="btnEnvoyer" type="submit" /> <input id="btnRechercher" value="Recherche" name="btnRechercher" onclick="btnRechercher_onclick()" type="button" disabled="true">  <input class="bouton" type="reset" value="Réintialiser"/></div><input id="BtnTrouverJeune" value="Plus Jeune" name="BtnTrouverJeune" disabled="true" type="button" onclick="BtnTrouverJeune"                                      >
-				<p id="lblMessageTarif" name="lblMessageTarif"></p>
+			<div id="Boutons"><input class="bouton" value="Envoyer" id="btnEnvoyer" type="submit"onclick="frmMembre_onclick()" />   <input class="bouton" type="reset" value="Réintialiser"/></div>
 		</form>
 			<!--ligne de séparation-->
 			<hr>

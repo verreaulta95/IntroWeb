@@ -202,19 +202,4 @@ span{
 	margin-top: 1%;
 	margin-bottom: 12px;
 }
-#btnRechercher{
-	height:30px;
-	width: 250px;
-	color: black;
-}
 
-#BtnTrouverJeune{
-	height:30px;
-	width: 250px;
-	color: black;
-	margin-left:45px;
-}
-
-#Age{
-	margin-left:180px;
-}
